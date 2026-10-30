@@ -1,0 +1,25 @@
+import {useState} from 'react';
+import type {Artifact} from '../types';
+export function ArtSymbol({shape,color='#708171'}:{shape:string;color?:string}){
+ return <svg viewBox="0 0 100 110" aria-hidden="true" fill={color} className="art-symbol">
+  <defs><linearGradient id={'metal-'+shape} x1="0" x2="1"><stop stopColor={color}/><stop offset=".45" stopColor="#b6b39a"/><stop offset="1" stopColor={color}/></linearGradient></defs>
+  {shape==='jue'?<><path d="M12 25 Q34 38 67 29 L92 15 78 42 Q70 67 44 67 L26 54Z"/><path d="M33 57 24 98 31 99 46 65M58 64 66 98 74 98 69 55M44 65 47 96 53 96 54 64"/><path d="M69 35C99 36 92 64 70 60" fill="none" stroke={color} strokeWidth="7"/><path d="M38 32V14M57 31V12" stroke={color} strokeWidth="4"/><ellipse cx="38" cy="13" rx="5" ry="3"/><ellipse cx="57" cy="12" rx="5" ry="3"/></>:null}
+  {shape==='gu'?<><path d="M15 10Q48 29 38 64Q37 85 23 99H78Q62 84 61 65Q51 31 86 10Z"/><ellipse cx="50" cy="10" rx="35" ry="6" fill="#4e5c4c"/><path d="M31 82H68M38 56H62M39 62H62" fill="none" stroke="#c4b790" strokeWidth="2"/></>:null}
+  {shape==='jia'?<><path d="M23 26H72L69 64Q50 78 29 63Z"/><path d="M29 59 22 99H28L40 69M62 66 72 99H79L71 60M48 70 48 99H54V69"/><path d="M72 31Q99 28 91 55L73 60" fill="none" stroke={color} strokeWidth="7"/><path d="M34 28V10M61 28V10" stroke={color} strokeWidth="5"/><ellipse cx="34" cy="9" rx="7" ry="3"/><ellipse cx="61" cy="9" rx="7" ry="3"/></>:null}
+  {shape==='you'?<><path d="M26 42C12 58 12 80 27 92Q50 101 74 91C87 75 87 56 72 42Z"/><path d="M25 46C8 0 89 0 76 46" fill="none" stroke={color} strokeWidth="7"/><path d="M25 42Q50 24 76 42Z"/><rect x="44" y="27" width="13" height="9" rx="3"/><path d="M24 61H78M23 80H78" stroke="#c1b493" fill="none" strokeWidth="2"/></>:null}
+  {['vase','jar'].includes(shape)?<><path d={shape==='vase'?'M35 8H65L61 30C60 47 83 51 80 74Q79 92 64 98H36Q20 92 20 75C18 52 40 47 39 30Z':'M33 20H67L65 30Q87 38 85 66L79 92Q50 101 21 92L15 67Q12 39 36 30Z'} fill={'url(#metal-'+shape+')'}/><ellipse cx="50" cy={shape==='vase'?8:20} rx={shape==='vase'?15:17} ry="4" fill="#526d61"/><path d="M25 63Q50 52 76 63M27 75Q51 86 75 75" fill="none" stroke="#c5c7af" strokeWidth="1.5"/></>:null}
+  {shape==='bowl'?<><ellipse cx="50" cy="45" rx="43" ry="15"/><path d="M7 45Q15 91 50 92Q86 91 93 45Q49 71 7 45Z" fill="#66513f"/><ellipse cx="50" cy="45" rx="37" ry="10" fill="#322d25"/><path d="m25 39 8 10m10-12 3 14m14-14-4 14m16-12-7 12" stroke="#ae895e" strokeWidth="2"/><rect x="37" y="91" width="26" height="5" rx="2"/></>:null}
+  {shape==='statue'?<><circle cx="51" cy="16" r="11"/><path d="M37 28Q50 23 64 29L68 57 63 61 58 40 59 65 62 102H52L48 70 45 102H35L38 64 40 39 32 61 26 57Z"/><path d="M46 37H56M48 44V57" stroke="#d5d0bf" fill="none" strokeWidth="1.5"/><rect x="27" y="103" width="42" height="5"/></>:null}
+  {shape==='buddha'?<><path d="M29 22Q29 1 53 5Q76 5 76 27L71 69Q67 86 53 90Q37 85 32 69Z"/><ellipse cx="31" cy="55" rx="5" ry="15"/><ellipse cx="73" cy="55" rx="5" ry="15"/><path d="M32 27Q51 32 73 27L69 10 53 3 36 10Z" fill="#6f776b"/><path d="M39 46H47M58 46H66M52 47 49 61H54M44 71Q53 75 62 70" stroke="#4a584e" strokeWidth="2" fill="none"/><rect x="43" y="88" width="20" height="11"/><path d="M29 99H77V106H29Z"/></>:null}
+  {shape==='hippo'?<><ellipse cx="45" cy="59" rx="36" ry="23" fill="#65a9b7"/><path d="M56 45Q83 37 93 54L94 72Q80 83 58 69Z" fill="#78b9c3"/><rect x="20" y="73" width="12" height="17" rx="3" fill="#78b9c3"/><rect x="56" y="73" width="12" height="17" rx="3" fill="#78b9c3"/><circle cx="80" cy="49" r="3" fill="#334b4b"/><circle cx="68" cy="41" r="5" fill="#65a9b7"/><path d="M29 54q15-18 23 0-12 21-23 0Zm-5 4-8 10m27-12-1 20m7-22 12 11" stroke="#285768" fill="none" strokeWidth="1.5"/></>:null}
+  {shape==='harp'?<><circle cx="38" cy="19" r="10"/><path d="M30 29H44L54 51 78 42 81 48 54 59 44 48V71H57L59 96H51L48 80H30V61H24V95H18V56H29Z"/><path d="M54 19 82 20 80 81 54 79Z" fill="none" stroke={color} strokeWidth="6"/><path d="M60 23V76M66 23V76M72 23V76" stroke={color} strokeWidth="1.5"/><rect x="19" y="98" width="66" height="6"/></>:null}
+  {shape==='sphinx'?<><path d="M11 80Q3 58 29 56L58 58 61 31 85 30 83 70 93 84 93 91H67L55 82 28 82 22 91H7Z"/><path d="M57 20Q60 5 79 10L88 31 83 52 63 49Z"/><path d="M66 25H80M64 35H79M68 45H75" stroke="#e0c6a7" strokeWidth="2"/><path d="M14 91H94V99H14Z"/><path d="M65 58 70 81H89M35 63 38 80" fill="none" stroke="#e0c6a7" strokeWidth="2"/></>:null}
+ </svg>;
+}
+export function ArtifactImage({artifact,className=''}:{artifact:Artifact;className?:string}){
+ const [stage,setStage]=useState(0);
+ return <div className={'artifact-image '+className}>
+  {stage<2?<img src={stage===0?artifact.image:artifact.remoteImage} alt={artifact.name} onError={()=>setStage(s=>s+1)} loading="lazy"/>:<div className="image-unavailable"><ArtSymbol shape={artifact.shape} color={hallColor(artifact.hall)}/><small>图片暂不可用 · 器形示意</small></div>}
+ </div>;
+}
+function hallColor(id:string){return id==='bronze'?'#7a8466':id==='ceramic'?'#88a79a':'#b5a28d';}

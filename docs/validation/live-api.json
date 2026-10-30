@@ -1,0 +1,759 @@
+{
+  "checkedAt": "2026-10-27T08:02:25.379Z",
+  "base": "http://localhost:5173",
+  "health": {
+    "status": "ok",
+    "mode": "ai",
+    "vision": true,
+    "version": "1.0.0",
+    "catalogSize": 36
+  },
+  "report": [
+    {
+      "case": "DeepSeek 问答与路线工具",
+      "status": "passed",
+      "response": {
+        "mode": "ai",
+        "sources": [
+          "jue"
+        ],
+        "recommendations": [],
+        "route": {
+          "nodes": [
+            {
+              "x": 630,
+              "y": 175,
+              "id": "p0",
+              "label": ""
+            },
+            {
+              "x": 630,
+              "y": 180,
+              "id": "p1",
+              "label": ""
+            },
+            {
+              "x": 620,
+              "y": 180,
+              "id": "p2",
+              "label": ""
+            },
+            {
+              "x": 620,
+              "y": 170,
+              "id": "p3",
+              "label": ""
+            },
+            {
+              "x": 520,
+              "y": 170,
+              "id": "p4",
+              "label": ""
+            },
+            {
+              "x": 520,
+              "y": 200,
+              "id": "p5",
+              "label": ""
+            },
+            {
+              "x": 450,
+              "y": 200,
+              "id": "p6",
+              "label": ""
+            },
+            {
+              "x": 450,
+              "y": 180,
+              "id": "p7",
+              "label": ""
+            },
+            {
+              "x": 160,
+              "y": 180,
+              "id": "p8",
+              "label": ""
+            },
+            {
+              "x": 160,
+              "y": 110,
+              "id": "p9",
+              "label": ""
+            }
+          ],
+          "meters": 48,
+          "from": "B1",
+          "to": "A1",
+          "targetId": "jue",
+          "artifactId": "jue",
+          "destination": {
+            "x": 160,
+            "y": 110,
+            "id": "p9",
+            "label": ""
+          },
+          "name": "青铜爵",
+          "minutes": 2,
+          "turns": 7,
+          "through": [
+            "青铜—陶瓷连通门"
+          ],
+          "instructions": [
+            {
+              "x": 630,
+              "y": 180,
+              "direction": "向西",
+              "meters": 1
+            },
+            {
+              "x": 620,
+              "y": 180,
+              "direction": "向北",
+              "meters": 1
+            },
+            {
+              "x": 620,
+              "y": 170,
+              "direction": "向西",
+              "meters": 8
+            },
+            {
+              "x": 520,
+              "y": 170,
+              "direction": "向南",
+              "meters": 2
+            },
+            {
+              "x": 520,
+              "y": 200,
+              "direction": "向西",
+              "meters": 6
+            },
+            {
+              "x": 450,
+              "y": 200,
+              "direction": "向北",
+              "meters": 2
+            },
+            {
+              "x": 450,
+              "y": 180,
+              "direction": "向西",
+              "meters": 23
+            },
+            {
+              "x": 160,
+              "y": 180,
+              "direction": "向北",
+              "meters": 6
+            }
+          ],
+          "steps": [
+            "B1 · 青瓷与茶",
+            "青铜—陶瓷连通门",
+            "A-01 青铜爵"
+          ],
+          "accessible": true
+        },
+        "tour": null,
+        "artifactId": "jue",
+        "text": "青铜爵在 A-01 展位，位于青铜艺术厅。从 B1 出发，经「青铜—陶瓷连通门」进入青铜厅，全程约 48 米，步行约 2 分钟，共 7 次转向；地图会显示完整路线。\n\n需要我顺便讲讲这件青铜爵的形制和年代吗？"
+      }
+    },
+    {
+      "case": "多轮对话中的指代",
+      "status": "passed",
+      "response": {
+        "mode": "ai",
+        "sources": [
+          "jue"
+        ],
+        "recommendations": [
+          "longquan",
+          "peony"
+        ],
+        "route": null,
+        "tour": null,
+        "artifactId": "jue",
+        "text": "馆方记录显示，这件青铜爵的材质为青铜，年代为西周，约公元前11世纪晚期。"
+      }
+    },
+    {
+      "case": "时间、兴趣与已参观记录",
+      "status": "passed",
+      "response": {
+        "mode": "ai",
+        "sources": [
+          "robe-vase",
+          "horse",
+          "pillow",
+          "peony",
+          "tea"
+        ],
+        "recommendations": [],
+        "route": null,
+        "tour": {
+          "title": "陶瓷艺术厅精选",
+          "budget": 30,
+          "stops": [
+            "robe-vase",
+            "horse",
+            "pillow",
+            "peony",
+            "tea"
+          ],
+          "segments": [
+            {
+              "nodes": [
+                {
+                  "x": 740,
+                  "y": 970,
+                  "id": "p0",
+                  "label": ""
+                },
+                {
+                  "x": 870,
+                  "y": 970,
+                  "id": "p1",
+                  "label": ""
+                },
+                {
+                  "x": 870,
+                  "y": 750,
+                  "id": "p2",
+                  "label": ""
+                },
+                {
+                  "x": 890,
+                  "y": 750,
+                  "id": "p3",
+                  "label": ""
+                },
+                {
+                  "x": 890,
+                  "y": 510,
+                  "id": "p4",
+                  "label": ""
+                },
+                {
+                  "x": 870,
+                  "y": 510,
+                  "id": "p5",
+                  "label": ""
+                },
+                {
+                  "x": 870,
+                  "y": 330,
+                  "id": "p6",
+                  "label": ""
+                }
+              ],
+              "meters": 65,
+              "from": "L0",
+              "to": "B4",
+              "targetId": "robe-vase",
+              "artifactId": "robe-vase",
+              "destination": {
+                "x": 870,
+                "y": 330,
+                "id": "p6",
+                "label": ""
+              },
+              "name": "五彩人物故事瓶",
+              "minutes": 2,
+              "turns": 5,
+              "through": [
+                "陶瓷厅入口"
+              ],
+              "instructions": [
+                {
+                  "x": 740,
+                  "y": 970,
+                  "direction": "向东",
+                  "meters": 10
+                },
+                {
+                  "x": 870,
+                  "y": 970,
+                  "direction": "向北",
+                  "meters": 18
+                },
+                {
+                  "x": 870,
+                  "y": 750,
+                  "direction": "向东",
+                  "meters": 2
+                },
+                {
+                  "x": 890,
+                  "y": 750,
+                  "direction": "向北",
+                  "meters": 19
+                },
+                {
+                  "x": 890,
+                  "y": 510,
+                  "direction": "向西",
+                  "meters": 2
+                },
+                {
+                  "x": 870,
+                  "y": 510,
+                  "direction": "向北",
+                  "meters": 14
+                }
+              ],
+              "steps": [
+                "入口大厅",
+                "陶瓷厅入口",
+                "B-12 五彩人物故事瓶"
+              ],
+              "accessible": true
+            },
+            {
+              "nodes": [
+                {
+                  "x": 870,
+                  "y": 330,
+                  "id": "p0",
+                  "label": ""
+                },
+                {
+                  "x": 890,
+                  "y": 330,
+                  "id": "p1",
+                  "label": ""
+                },
+                {
+                  "x": 890,
+                  "y": 280,
+                  "id": "p2",
+                  "label": ""
+                },
+                {
+                  "x": 930,
+                  "y": 280,
+                  "id": "p3",
+                  "label": ""
+                }
+              ],
+              "meters": 9,
+              "from": "B4",
+              "to": "B4",
+              "targetId": "horse",
+              "artifactId": "horse",
+              "destination": {
+                "x": 930,
+                "y": 280,
+                "id": "p3",
+                "label": ""
+              },
+              "name": "唐三彩骑马俑",
+              "minutes": 1,
+              "turns": 2,
+              "through": [],
+              "instructions": [
+                {
+                  "x": 870,
+                  "y": 330,
+                  "direction": "向东",
+                  "meters": 2
+                },
+                {
+                  "x": 890,
+                  "y": 330,
+                  "direction": "向北",
+                  "meters": 4
+                },
+                {
+                  "x": 890,
+                  "y": 280,
+                  "direction": "向东",
+                  "meters": 3
+                }
+              ],
+              "steps": [
+                "B4 · 陶瓷与生活",
+                "B-10 唐三彩骑马俑"
+              ],
+              "accessible": true
+            },
+            {
+              "nodes": [
+                {
+                  "x": 930,
+                  "y": 280,
+                  "id": "p0",
+                  "label": ""
+                },
+                {
+                  "x": 690,
+                  "y": 280,
+                  "id": "p1",
+                  "label": ""
+                }
+              ],
+              "meters": 19,
+              "from": "B4",
+              "to": "B2",
+              "targetId": "pillow",
+              "artifactId": "pillow",
+              "destination": {
+                "x": 690,
+                "y": 280,
+                "id": "p1",
+                "label": ""
+              },
+              "name": "磁州窑牡丹纹陶枕",
+              "minutes": 1,
+              "turns": 0,
+              "through": [
+                "陶瓷厅展区通道"
+              ],
+              "instructions": [
+                {
+                  "x": 930,
+                  "y": 280,
+                  "direction": "向西",
+                  "meters": 19
+                }
+              ],
+              "steps": [
+                "B4 · 陶瓷与生活",
+                "陶瓷厅展区通道",
+                "B-04 磁州窑牡丹纹陶枕"
+              ],
+              "accessible": true
+            },
+            {
+              "nodes": [
+                {
+                  "x": 690,
+                  "y": 280,
+                  "id": "p0",
+                  "label": ""
+                },
+                {
+                  "x": 630,
+                  "y": 280,
+                  "id": "p1",
+                  "label": ""
+                },
+                {
+                  "x": 630,
+                  "y": 220,
+                  "id": "p2",
+                  "label": ""
+                }
+              ],
+              "meters": 10,
+              "from": "B2",
+              "to": "B1",
+              "targetId": "peony",
+              "artifactId": "peony",
+              "destination": {
+                "x": 630,
+                "y": 220,
+                "id": "p2",
+                "label": ""
+              },
+              "name": "磁州窑牡丹纹瓶",
+              "minutes": 1,
+              "turns": 1,
+              "through": [],
+              "instructions": [
+                {
+                  "x": 690,
+                  "y": 280,
+                  "direction": "向西",
+                  "meters": 5
+                },
+                {
+                  "x": 630,
+                  "y": 280,
+                  "direction": "向北",
+                  "meters": 5
+                }
+              ],
+              "steps": [
+                "B2 · 宋金窑艺",
+                "B-03 磁州窑牡丹纹瓶"
+              ],
+              "accessible": true
+            },
+            {
+              "nodes": [
+                {
+                  "x": 630,
+                  "y": 220,
+                  "id": "p0",
+                  "label": ""
+                },
+                {
+                  "x": 650,
+                  "y": 220,
+                  "id": "p1",
+                  "label": ""
+                },
+                {
+                  "x": 650,
+                  "y": 170,
+                  "id": "p2",
+                  "label": ""
+                },
+                {
+                  "x": 690,
+                  "y": 170,
+                  "id": "p3",
+                  "label": ""
+                }
+              ],
+              "meters": 9,
+              "from": "B1",
+              "to": "B1",
+              "targetId": "tea",
+              "artifactId": "tea",
+              "destination": {
+                "x": 690,
+                "y": 170,
+                "id": "p3",
+                "label": ""
+              },
+              "name": "建窑兔毫茶碗",
+              "minutes": 1,
+              "turns": 2,
+              "through": [],
+              "instructions": [
+                {
+                  "x": 630,
+                  "y": 220,
+                  "direction": "向东",
+                  "meters": 2
+                },
+                {
+                  "x": 650,
+                  "y": 220,
+                  "direction": "向北",
+                  "meters": 4
+                },
+                {
+                  "x": 650,
+                  "y": 170,
+                  "direction": "向东",
+                  "meters": 3
+                }
+              ],
+              "steps": [
+                "B1 · 青瓷与茶",
+                "B-02 建窑兔毫茶碗"
+              ],
+              "accessible": true
+            }
+          ],
+          "meters": 112,
+          "minutes": 22,
+          "completed": false
+        },
+        "artifactId": null,
+        "text": "30分钟陶瓷路线（约22分钟、112米，全程无楼梯）：\n\n1. 从入口大厅向东10米、向北18米，经陶瓷厅入口，再向东2米、向北19米、向西2米、向北14米，到B-12五彩人物故事瓶。\n2. 向东2米、向北4米、向东3米，到B-10唐三彩骑马俑。\n3. 沿陶瓷厅展区通道向西19米，到B-04磁州窑牡丹纹陶枕。\n4. 向西5米、向北5米，到B-03磁州窑牡丹纹瓶。\n5. 向东2米、向北4米、向东3米，到B-02建窑兔毫茶碗。\n\n你已看过龙泉窑青瓷瓶，这条路线从彩瓷、三彩到宋金窑艺与茶盏，正好补上不同釉色与器类。想先了解哪一件？"
+      }
+    },
+    {
+      "case": "新增藏品与精确位置寻路",
+      "status": "passed",
+      "response": {
+        "mode": "ai",
+        "sources": [
+          "shiva"
+        ],
+        "recommendations": [],
+        "route": {
+          "nodes": [
+            {
+              "x": 690,
+              "y": 170,
+              "id": "p0",
+              "label": ""
+            },
+            {
+              "x": 650,
+              "y": 170,
+              "id": "p1",
+              "label": ""
+            },
+            {
+              "x": 650,
+              "y": 270,
+              "id": "p2",
+              "label": ""
+            },
+            {
+              "x": 880,
+              "y": 270,
+              "id": "p3",
+              "label": ""
+            },
+            {
+              "x": 880,
+              "y": 430,
+              "id": "p4",
+              "label": ""
+            },
+            {
+              "x": 970,
+              "y": 430,
+              "id": "p5",
+              "label": ""
+            },
+            {
+              "x": 970,
+              "y": 610,
+              "id": "p6",
+              "label": ""
+            },
+            {
+              "x": 1010,
+              "y": 610,
+              "id": "p7",
+              "label": ""
+            },
+            {
+              "x": 1010,
+              "y": 630,
+              "id": "p8",
+              "label": ""
+            },
+            {
+              "x": 1120,
+              "y": 630,
+              "id": "p9",
+              "label": ""
+            },
+            {
+              "x": 1120,
+              "y": 860,
+              "id": "p10",
+              "label": ""
+            }
+          ],
+          "meters": 96,
+          "from": "B1",
+          "to": "C5",
+          "targetId": "shiva",
+          "artifactId": "shiva",
+          "destination": {
+            "x": 1120,
+            "y": 860,
+            "id": "p10",
+            "label": ""
+          },
+          "name": "舞王湿婆像",
+          "minutes": 3,
+          "turns": 9,
+          "through": [
+            "陶瓷厅展区通道",
+            "陶瓷厅入口",
+            "雕塑厅入口",
+            "雕塑厅南区通道"
+          ],
+          "instructions": [
+            {
+              "x": 690,
+              "y": 170,
+              "direction": "向西",
+              "meters": 3
+            },
+            {
+              "x": 650,
+              "y": 170,
+              "direction": "向南",
+              "meters": 8
+            },
+            {
+              "x": 650,
+              "y": 270,
+              "direction": "向东",
+              "meters": 18
+            },
+            {
+              "x": 880,
+              "y": 270,
+              "direction": "向南",
+              "meters": 13
+            },
+            {
+              "x": 880,
+              "y": 430,
+              "direction": "向东",
+              "meters": 7
+            },
+            {
+              "x": 970,
+              "y": 430,
+              "direction": "向南",
+              "meters": 14
+            },
+            {
+              "x": 970,
+              "y": 610,
+              "direction": "向东",
+              "meters": 3
+            },
+            {
+              "x": 1010,
+              "y": 610,
+              "direction": "向南",
+              "meters": 2
+            },
+            {
+              "x": 1010,
+              "y": 630,
+              "direction": "向东",
+              "meters": 9
+            },
+            {
+              "x": 1120,
+              "y": 630,
+              "direction": "向南",
+              "meters": 18
+            }
+          ],
+          "steps": [
+            "B1 · 青瓷与茶",
+            "陶瓷厅展区通道",
+            "陶瓷厅入口",
+            "雕塑厅入口",
+            "雕塑厅南区通道",
+            "C-11 舞王湿婆像"
+          ],
+          "accessible": true
+        },
+        "tour": null,
+        "artifactId": "shiva",
+        "text": "舞王湿婆像在雕塑厅C-11展位。从B1出发，经陶瓷厅展区通道、陶瓷厅入口、雕塑厅入口、雕塑厅南区通道，约96米、3分钟，地图已标出路线，可点“开始引导”。\n\n想先了解这件湿婆像的看点吗？"
+      }
+    },
+    {
+      "case": "DeepSeek 馆方图片识别：william",
+      "status": "passed",
+      "response": {
+        "mode": "vision",
+        "available": true,
+        "id": "william",
+        "observation": "图中为一件蓝色釉陶河马造型器物，通体施鲜艳的蓝绿色釉，器身以深色线条描绘莲花等植物纹样，四肢短粗、头部前伸，整体为河马形象。",
+        "uncertainty": "照片无法确认腿部是否有修复色差、釉面细节及制作年代，仅凭图像不能鉴定真伪。"
+      }
+    },
+    {
+      "case": "DeepSeek 馆方图片识别：shiva",
+      "status": "passed",
+      "response": {
+        "mode": "vision",
+        "available": true,
+        "id": "shiva",
+        "observation": "图像为一件铜合金舞王湿婆像：人物在火焰围成的圆形光环中起舞，抬起的左脚与支撑的右脚形成平衡，多臂分别持鼓、火焰并作手势，发丝向两侧展开，立于带铭饰的圆形底座上。",
+        "uncertainty": "照片无法判断铸造年代、合金成分与真伪，也不能确认是否为馆藏同一件器物；仅凭视觉特征与候选条目高度相符。"
+      }
+    }
+  ]
+}

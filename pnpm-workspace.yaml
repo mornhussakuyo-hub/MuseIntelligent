@@ -1,0 +1,8 @@
+overrides:
+  postcss: 8.5.23
+  nanoid: 3.3.18
+  lightningcss: 1.32.0
+  picomatch: 4.0.4
+  tinyglobby: 0.2.16
+  fdir: 6.5.0
+  detect-libc: 2.1.2

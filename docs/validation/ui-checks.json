@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-10-27T08:26:45.426Z",
+  "browser": "Google Chrome",
+  "mobileViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    {
+      "case": "二维全馆地图：三个展厅、36 件展柜、21 个机位",
+      "status": "passed"
+    },
+    {
+      "case": "手机展厅聚焦，12 件藏品完整可见，无横向溢出",
+      "status": "passed"
+    },
+    {
+      "case": "藏品预览、讲解、档案来源和图片放大",
+      "status": "passed"
+    },
+    {
+      "case": "新增甬钟检索与地图定位",
+      "status": "passed"
+    },
+    {
+      "case": "引导移动、暂停与取消",
+      "status": "passed",
+      "positionBeforeCancel": "970.1344544708804,690",
+      "positionAfterCancel": "970.1344544708804,690"
+    },
+    {
+      "case": "15 分钟主题路线：第一站、下一站与完成反馈",
+      "status": "passed",
+      "stops": [
+        "ding",
+        "jue"
+      ]
+    },
+    {
+      "case": "DeepSeek 甬钟指路与手机聊天中的查看路线按钮",
+      "status": "passed",
+      "routeMeters": 46
+    },
+    {
+      "case": "笔记刷新后保留，删除后收藏面板恢复空状态",
+      "status": "passed"
+    },
+    {
+      "case": "识图页面使用馆藏样例，DeepSeek 视觉模型返回蓝色河马威廉及档案入口",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "desktop-map.png",
+    "mobile-gallery.png",
+    "mobile-navigation.png",
+    "recognition.png"
+  ],
+  "deviceLimits": "手机界面使用浏览器视口验证；麦克风与设备语音未做实机验收。"
+}
