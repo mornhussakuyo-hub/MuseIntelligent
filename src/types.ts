@@ -11,4 +11,4 @@ export interface Route {from:string;to:string;targetId:string;artifactId:string|
 export interface Tour {title:string;budget:number;stops:string[];segments:Route[];meters:number;minutes:number;completed:boolean}
 export interface GuideResponse {text:string;mode:string;sources:string[];recommendations:string[];route:Route|null;tour:Tour|null;artifactId:string|null;notice?:string}
 export interface Message extends Partial<GuideResponse> {id:string;role:'user'|'assistant';text:string;time:string}
-export interface VisitState {visited:string[];favorites:string[];notes:Record<string,string>;cameraId:string;position?:Point;messages:Message[];audience:'adult'|'child';interest:string;minutes:number;tour:Tour|null;tourIndex:number}
+export interface VisitState {visited:string[];favorites:string[];notes:Record<string,string>;cameraId:string;position?:Point;messages:Message[];audience:'adult'|'child';interest:string;minutes:number;tour:Tour|null;tourIndex:number;tourArrivedId?:string|null}

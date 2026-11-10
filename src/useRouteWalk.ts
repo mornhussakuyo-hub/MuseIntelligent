@@ -1,9 +1,9 @@
 import {useEffect,useRef,useState} from 'react';
 import {pointAlong} from '../data/navigation.mjs';
 import type{Route}from'./types';
-export default function useRouteWalk(route:Route|null,onArrive:()=>void){
+export default function useRouteWalk(route:Route|null,onArrive:()=>void,autoStart=false){
  const[running,setRunning]=useState(false),[progress,setProgress]=useState(0);const value=useRef(0),arrive=useRef(onArrive);arrive.current=onArrive;
- useEffect(()=>{setRunning(false);setProgress(0);value.current=0;},[route]);
+ useEffect(()=>{setRunning(!!route&&autoStart);setProgress(0);value.current=0;},[route,autoStart]);
  useEffect(()=>{
   if(!running||!route)return;
   let frame=0,last=performance.now();const duration=Math.max(3500,Math.min(16000,route.meters*115));

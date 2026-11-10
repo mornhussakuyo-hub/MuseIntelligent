@@ -13,15 +13,15 @@ export default function GuideChat({messages,busy,cameraId,mode,onSend,onUpload,o
  const voice=()=>{if(listening){recognition.current?.stop();return;}const Recognition=(window as unknown as {SpeechRecognition?:new()=>SpeechInput;webkitSpeechRecognition?:new()=>SpeechInput}).SpeechRecognition||(window as unknown as {webkitSpeechRecognition?:new()=>SpeechInput}).webkitSpeechRecognition;
   if(!Recognition){setVoiceError('此浏览器暂不支持语音输入，可以直接输入文字。');return;}const r=new Recognition();r.lang='zh-CN';r.continuous=false;r.interimResults=false;r.onresult=e=>{setInput(e.results[0][0].transcript);setListening(false);};r.onerror=e=>{setListening(false);setVoiceError(e.error==='not-allowed'?'麦克风未获授权，请在浏览器设置中允许，或使用文字输入。':'暂时无法听清，请重试或使用文字输入。');};r.onend=()=>setListening(false);recognition.current=r;setVoiceError('');try{r.start();setListening(true);}catch{setVoiceError('麦克风暂不可用，请使用文字输入。');}
  };
- const prompts=['介绍眼前的文物','帮我规划参观路线'];
+ const prompts=['介绍眼前的文物','生成全馆推荐路线'];
  return <aside className="guide-panel" aria-label="Muse 智能导览对话">
   <div className="guide-header"><div className="muse-avatar"><Sparkles size={23}/><i/></div><div><strong>Muse <span>AI 导览</span></strong></div><button className="icon-button clear-chat" aria-label="开启新对话" title="开启新对话" onClick={onReset} disabled={busy}><RotateCcw size={16}/></button><button className="icon-button close-chat" onClick={onClose} aria-label="关闭导览对话"><X size={20}/></button></div>
-  <div className="guide-location"><MapPin size={12}/><span>当前位置 · {camera(cameraId).name}</span><span className={'connection-dot '+(mode==='ai'?'online':'')}/></div>
+  <div className="guide-location"><MapPin size={15}/><span>{camera(cameraId).name.replace('机位','')}</span></div>
   <div className="messages" role="log" aria-label="导览消息" aria-live="polite" aria-relevant="additions text">
 
-   {messages.map(m=><div key={m.id} className={'message '+m.role}>{m.role==='assistant'&&messages.length>1&&<span className="message-author"><Sparkles size={12}/> MUSE</span>}<div className="message-content">{m.text.split(/\n+/).filter(Boolean).map((line,i)=><p key={i}>{line.replace(/\*\*/g,'')}</p>)}</div>
+   {messages.map(m=><div key={m.id} className={'message '+m.role}><div className="message-content">{m.text.split(/\n+/).filter(Boolean).map((line,i)=><p key={i}>{line.replace(/\*\*/g,'')}</p>)}</div>
     {!!m.sources?.length&&<div className="message-sources"><span><BookOpen size={11}/>依据馆藏档案</span>{m.sources.slice(0,3).map(id=>{const a=art(id);return a&&<button key={id} onClick={()=>onArtifact(a)}>{a.name}<ArrowUpRight size={10}/></button>;})}</div>}
-    {m.role==='assistant'&&(m.route||m.tour)&&<button className="message-route" onClick={()=>onRoute(m)}><RouteIcon size={14}/>在地图上查看路线<ArrowRight size={13}/></button>}
+    {m.role==='assistant'&&(m.route||m.tour)&&<button className="message-route" onClick={()=>onRoute(m)}><RouteIcon size={16}/>{m.tour?'开始多站游览':'单站导航'}<ArrowRight size={16}/></button>}
     {m.notice&&<small className="message-notice">{m.notice}</small>}
     {m.role==='assistant'&&m.id!=='welcome'&&<button className="speak-message" aria-label="朗读这条讲解" title="朗读讲解" onClick={()=>speech.speak(m.text)}><Volume2 size={12}/></button>}
    </div>)}

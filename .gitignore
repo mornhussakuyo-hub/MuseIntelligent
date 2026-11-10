@@ -4,3 +4,5 @@ dist/
 .pnpm-store/
 var/
 *.log
+release/
+API密钥.txt

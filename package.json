@@ -1,26 +1,61 @@
 {
   "name": "muse-intelligent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22.12" },
+  "main": "desktop/main.mjs",
+  "description": "MuseIntelligent 博物馆智能导览",
+  "author": "MuseIntelligent",
+  "engines": {
+    "node": ">=22.12"
+  },
   "scripts": {
     "dev": "node server/dev.mjs",
     "build": "tsc --noEmit && vite build",
     "start": "node --env-file-if-exists=.env server/index.mjs",
     "test": "node --test tests/*.test.mjs",
-    "preview": "vite preview --host 0.0.0.0"
+    "test:ui": "electron scripts/verify-ui.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "desktop": "electron .",
+    "package:win": "pnpm build && electron-builder --win portable --x64 --publish never"
   },
   "dependencies": {
     "lucide-react": "1.31.0",
     "react": "19.2.6",
     "react-dom": "19.2.6"
   },
+  "build": {
+    "appId": "com.museintelligent.desktop",
+    "productName": "MuseIntelligent",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "desktop/**/*",
+      "server/index.mjs",
+      "server/guide.mjs",
+      "data/**/*",
+      "dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "desktop/icon.ico",
+      "signExecutable": false
+    },
+    "portable": {
+      "artifactName": "MuseIntelligent-${version}-win-x64.exe"
+    }
+  },
   "devDependencies": {
     "@types/node": "22.19.19",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
+    "electron": "^44.5.1",
+    "electron-builder": "^26.18.0",
     "typescript": "5.9.3",
     "vite": "8.0.13"
   }

@@ -33,7 +33,7 @@ export function answerLocally(message, context={}) {
   if (/我在|我的位置|现在在哪|当前位置/.test(message)) return {...base,text:`你当前在「${camera.name}」，${hall?`属于${hall.short}`:'位于公共区域'}。${camera.description} 这里的位置由你选择的机位确定。`};
   if (/路线|规划|分钟|小时|逛|游览|参观.*推荐|带孩子|亲子/.test(message) && !(/怎么|去|在哪/.test(message)&&target)) {
     const match=message.match(/(\d+)\s*分钟/); const minutes=/半小时/.test(message)?30:/小时/.test(message)?60:match?Number(match[1]):/亲子|孩子/.test(message)?20:30;
-    const interest=halls.find(h=>message.includes(h.short)||message.includes(h.id==='bronze'?'青铜':h.id==='ceramic'?'陶瓷':'雕塑'))?.id || context.interest || 'all';
+    const interest=/全馆|全部展厅/.test(message)?'all':halls.find(h=>message.includes(h.short)||message.includes(h.id==='bronze'?'青铜':h.id==='ceramic'?'陶瓷':'雕塑'))?.id || context.interest || 'all';
     const tour=planTour(camera.id,{minutes,interest,visited:context.visited||[],position:context.position});
     return {...base,tour,sources:tour.stops,text:tour.completed?'你已经看过所有馆藏了。可以回到收藏夹，挑一件再深入了解。':`为你安排「${tour.title}」，从${camera.name}出发，串联${tour.stops.length}件藏品，预计约${tour.minutes}分钟，步行约${tour.meters}米。\n\n${tour.stops.map((id,i)=>`${i+1}. ${getArtifact(id).name} · ${getHall(getArtifact(id).hall).short}`).join('\n')}\n\n路线沿一层连廊和展厅通道行进，全程无楼梯。时间与距离均为虚拟展馆的估算。`};
   }

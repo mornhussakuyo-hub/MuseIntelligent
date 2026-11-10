@@ -4,6 +4,10 @@
 
 开发环境需要 Node.js 22.12 或更新版本，以及 pnpm。
 
+Windows 桌面版：将 `MuseIntelligent-1.0.1-win-x64.exe` 和 `API密钥.txt` 放在同一目录，双击 EXE 即可运行，无需安装 Node.js。TXT 只填写 DeepSeek 密钥，修改后重启应用；缺失或留空时使用本地馆藏导览。EXE 内不包含密钥。参观记录保存在当前 Windows 用户的应用数据目录。桌面版使用本地端口 18787，馆方来源链接会在系统浏览器打开。语音输入与朗读取决于桌面运行环境支持。
+
+从源码打包桌面版：`pnpm package:win`，输出位于 `release/`；密钥 TXT 需另行放到 EXE 旁边。
+
 ```sh
 pnpm install
 pnpm dev
